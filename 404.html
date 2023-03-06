@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>正在加载...</title>
+<style>
+	body{
+		background-color:#eaecf0;
+		font-size:14px;
+	}
+	h3{
+		font-size:60px;
+		color:#eee;
+		text-align:center;
+		padding-top:30px;
+		font-weight:normal;
+	}
+</style>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+    var url = window.location.href;
+    var end = url.indexOf("=");
+    var url_prefix = url.substring("h",end);
+    var url_prefix_should_be = "https://wiki.thfmu.com/index.php?title"
+    if (url_prefix != url_prefix_should_be) {
+    window.location.href="https://wiki.thfmu.com/index.php?title=" + url.substr(url.lastIndexOf("/") + 1);
+    }
+    else {
+    var url = window.location.href;
+    window.location.href="https://wiki.thfmu.com/index.php?search=" + url.substr(url.lastIndexOf("=") + 1);
+    }
+</script>
+</body>
+</html>
